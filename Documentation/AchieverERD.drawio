@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2024-04-15T16:37:32.176Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Su4RRjejl1a6A4l2tBo1" version="24.2.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-15T22:05:28.869Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="poO9ve1sW14XUMahmWJO" version="24.2.5" type="github">
   <diagram name="Page-1" id="otH-j6e9u0tS8MlDvqK7">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="BBRGsMGZDER47HDqVRWC-3" value="Task" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="230" y="40" width="160" height="150" as="geometry">
+          <mxGeometry x="230" y="40" width="160" height="160" as="geometry">
             <mxRectangle x="40" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BBRGsMGZDER47HDqVRWC-4" value="+isDone&lt;br&gt;+title&lt;br&gt;+description&lt;div&gt;+difficulty&lt;br&gt;+dueDate&lt;/div&gt;&lt;div&gt;+doneDate&lt;br&gt;+createdDate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-3" vertex="1">
-          <mxGeometry y="30" width="160" height="120" as="geometry" />
+        <mxCell id="BBRGsMGZDER47HDqVRWC-4" value="+isDone&lt;br&gt;+title&lt;br&gt;+description&lt;div&gt;+difficulty&lt;br&gt;+dueDate&lt;/div&gt;&lt;div&gt;+doneDate&lt;br&gt;+createdDate&lt;/div&gt;&lt;div&gt;+userId&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-3" vertex="1">
+          <mxGeometry y="30" width="160" height="130" as="geometry" />
         </mxCell>
         <mxCell id="BBRGsMGZDER47HDqVRWC-5" value="Subtask" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="10" y="40" width="160" height="130" as="geometry" />
@@ -25,12 +25,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="BBRGsMGZDER47HDqVRWC-11" value="Habit" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="10" y="260" width="160" height="130" as="geometry" />
+          <mxGeometry x="10" y="260" width="160" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="BBRGsMGZDER47HDqVRWC-12" value="+title&lt;div&gt;+description&lt;br&gt;+difficulty&lt;br&gt;+timesPerWeek&lt;/div&gt;&lt;div&gt;+skipDayOfRest&lt;br&gt;&lt;div&gt;+createdDate&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-11" vertex="1">
-          <mxGeometry y="30" width="160" height="100" as="geometry" />
+        <mxCell id="BBRGsMGZDER47HDqVRWC-12" value="+title&lt;div&gt;+description&lt;br&gt;+difficulty&lt;br&gt;+timesPerWeek&lt;/div&gt;&lt;div&gt;+skipDayOfRest&lt;br&gt;&lt;div&gt;+createdDate&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+userId&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-11" vertex="1">
+          <mxGeometry y="30" width="160" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="45CmGr4-vcD3G4dLHxqX-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="BBRGsMGZDER47HDqVRWC-11" source="BBRGsMGZDER47HDqVRWC-12" target="BBRGsMGZDER47HDqVRWC-12">
+        <mxCell id="45CmGr4-vcD3G4dLHxqX-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="BBRGsMGZDER47HDqVRWC-11" source="BBRGsMGZDER47HDqVRWC-12" target="BBRGsMGZDER47HDqVRWC-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="BBRGsMGZDER47HDqVRWC-16" value="HabitInstance" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -48,7 +48,7 @@
         <mxCell id="BBRGsMGZDER47HDqVRWC-29" value="WeeklyGoal" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="600" y="40" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="BBRGsMGZDER47HDqVRWC-30" value="&lt;div&gt;+firstDay&lt;/div&gt;&lt;div&gt;+lastDay&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-29" vertex="1">
+        <mxCell id="BBRGsMGZDER47HDqVRWC-30" value="&lt;div&gt;+firstDay&lt;/div&gt;&lt;div&gt;+lastDay&lt;br&gt;+userId&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="BBRGsMGZDER47HDqVRWC-29" vertex="1">
           <mxGeometry y="30" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="BBRGsMGZDER47HDqVRWC-31" value="TaskWeeklyGoal" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
@@ -75,10 +75,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="45CmGr4-vcD3G4dLHxqX-1" value="UserSettings" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+        <mxCell id="45CmGr4-vcD3G4dLHxqX-1" value="UserSettings" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
           <mxGeometry x="600" y="250" width="160" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="45CmGr4-vcD3G4dLHxqX-2" value="&lt;div&gt;+firstDayOfWeek&lt;/div&gt;+dayOfRest" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="45CmGr4-vcD3G4dLHxqX-1">
+        <mxCell id="45CmGr4-vcD3G4dLHxqX-2" value="&lt;div&gt;+firstDayOfWeek&lt;/div&gt;+dayOfRest&lt;div&gt;+userId&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="45CmGr4-vcD3G4dLHxqX-1" vertex="1">
           <mxGeometry y="30" width="160" height="90" as="geometry" />
         </mxCell>
       </root>
