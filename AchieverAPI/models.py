@@ -9,6 +9,7 @@ class Task(models.Model):
     due_date = models.DateTimeField(null=True, blank=True)
     done_date = models.DateTimeField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -34,6 +35,7 @@ class Habit(models.Model):
     times_per_week = models.SmallIntegerField(default=7)
     skip_day_of_rest = models.BooleanField(default=True)
     created_date = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -53,6 +55,7 @@ class WeeklyGoal(models.Model):
     subtasks = models.ManyToManyField(Subtask, related_name='weekly_goals')
     first_day = models.DateField()
     last_day = models.DateField()
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return 'Weekly Goal: ' + str(self.first_day) + ' - ' + str(self.last_day)

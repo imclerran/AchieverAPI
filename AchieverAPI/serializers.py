@@ -3,6 +3,7 @@ from AchieverAPI.models import Task, Subtask, Habit, HabitInstance, WeeklyGoal, 
 
 class TaskSerializer(serializers.ModelSerializer):
     subtasks = serializers.SubtaskSerializer(many=True, read_only=True)
+    user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     class Meta:
         model = Task
         fields = [
@@ -15,10 +16,12 @@ class TaskSerializer(serializers.ModelSerializer):
             'done_date', 
             'created_date',
             'subtasks'
+            'user'
         ]
         extra_kwargs = {
             'id': {'read_only': True},
             'created_date': {'read_only': True},
+            'user': {'read_only': True},
         }
         
 
@@ -43,6 +46,7 @@ class SubtaskSerializer(serializers.ModelSerializer):
 
 
 class HabitSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     class Meta:
         model = Habit
         fields = [
@@ -53,10 +57,12 @@ class HabitSerializer(serializers.ModelSerializer):
             'times_per_week',
             'skip_day_of_rest',
             'created_date',
+            'user'
         ]
         extra_kwargs = {
             'id': {'read_only': True},
             'created_date': {'read_only': True},
+            'user': {'read_only': True},
         }
 
 
@@ -79,6 +85,7 @@ class HabitInstanceSerializer(serializers.ModelSerializer):
 class WeeklyGoalSerializer(serializers.ModelSerializer):
     tasks = serializers.PrimaryKeyRelatedField(many=True, queryset=Task.objects.all())
     subtasks = serializers.PrimaryKeyRelatedField(many=True, queryset=Subtask.objects.all())
+    user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     class Meta:
         model = WeeklyGoal
         fields = [
@@ -87,9 +94,11 @@ class WeeklyGoalSerializer(serializers.ModelSerializer):
             'subtasks',
             'first_day',
             'last_day',
+            'user',
         ]
         extra_kwargs = {
             'id': {'read_only': True},
+            'user': {'read_only': True},
         }
 
 
