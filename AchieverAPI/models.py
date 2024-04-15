@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Task(models.Model):
-    isDone = models.BooleanField(default=False)
+    is_done = models.BooleanField(default=False)
     title = models.CharField(max_length=255, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
     difficulty = models.SmallIntegerField(default=1)
@@ -15,7 +15,7 @@ class Task(models.Model):
     
 
 class Subtask(models.Model):
-    isDone = models.BooleanField(default=False)
+    is_done = models.BooleanField(default=False)
     title = models.CharField(max_length=255, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
     difficulty = models.SmallIntegerField(default=1)
@@ -32,6 +32,7 @@ class Habit(models.Model):
     description = models.TextField(null=True, blank=True)
     difficulty = models.SmallIntegerField(default=1)
     times_per_week = models.SmallIntegerField(default=7)
+    skip_day_of_rest = models.BooleanField(default=True)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -40,7 +41,7 @@ class Habit(models.Model):
 
 class HabitInstance(models.Model):
     date = models.DateField()
-    isDone = models.BooleanField(default=False)
+    is_done = models.BooleanField(default=False)
     habit = models.ForeignKey(Habit, on_delete=models.CASCADE, related_name='habit_instances')
 
     def __str__(self):
@@ -55,3 +56,12 @@ class WeeklyGoal(models.Model):
 
     def __str__(self):
         return 'Weekly Goal: ' + str(self.first_day) + ' - ' + str(self.last_day)
+    
+
+class UserSettings(models.Model):
+    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    first_day_of_week = models.SmallIntegerField(default=1)
+    day_of_rest = models.SmallIntegerField(default=7)
+
+    def __str__(self):
+        return self.user.username + ' Settings'
